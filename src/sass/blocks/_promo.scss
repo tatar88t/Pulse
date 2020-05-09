@@ -1,0 +1,234 @@
+.promo{
+    min-height: 650px;
+    padding: 21px 0 93px 0;
+    background: url('../img/header_bg.jpg') center (center / cover) no-repeat;
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 90px;
+    }
+    &__header{
+        font-size: 42px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: right;
+        margin: 0;
+        font-weight: 700;
+    }
+    &__subheader{
+        font-size: 24px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 400;
+    }
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+        width: 425px;
+        margin-top: 65px;
+        margin-bottom: 70px;
+    }    
+    &__icon{
+        text-align: center;
+        width: 106px;
+        font-size: 14px;
+        color:#fff;
+        font-weight: 500;
+        img {
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &__catalog{
+        color: #fff;
+        margin-top: 20px;
+        a {
+            color: #fff;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+    }
+    
+}
+.benefits{
+    padding: 70px 0 84px 0;
+    background: #f6f6f6;
+    
+    &__header{
+        font-size: 30px;
+        color: rgb(13, 13, 13);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    &__block{
+        margin-top: 74px;
+        display: flex;
+        justify-content: space-between;
+        &-item{
+            width: 252px;
+            text-align: center;
+            img{
+                height: 64px;
+            }
+        }
+    }
+    &__text-block{
+        margin-top: 45px;
+        font-size: 14px;
+        span{
+            font-size: 18px;
+            margin-bottom: 28px;
+            font-weight: 600;      
+        }
+        a{
+           text-transform: uppercase;
+           color: $main-color;
+           text-decoration: underline; 
+        }
+    }
+        
+}
+@media (max-width: 1140px) {
+    .promo{
+        padding: 21px 20px 40px 20px;
+    }
+}
+@media (max-width: 992px) {
+    .promo{
+        min-height: 600px;
+    }
+    .benefits{
+        padding: 40px 0 50px 0;
+        &__block{
+            margin-top: 44px;
+            &-item{
+                width: 220px;
+            }
+        }
+        &__text-block{
+            font-size: 12px;
+            margin-top: 30px;
+            span {
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+@media (max-width: 768px){
+    .promo{
+        min-height: 480px;
+        padding: 21px 20px 40px 20px;
+        &__wrapper{
+            margin-top: 50px;
+        }
+        &__header{
+            font-size: 36px;
+
+
+        }
+        &__subheader{
+            font-size: 20px;
+
+        }
+        &__icons{
+            display: flex;
+            justify-content: space-between;
+            width: 380px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }    
+        &__icon{
+            text-align: center;
+            width: 106px;
+            font-size: 14px;
+            color:#fff;
+            font-weight: 500;
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }      
+    }
+    .benefits{
+        &__header{
+            font-size: 24px;
+        }
+        padding: 40px 0 40px 0;
+        &__block{
+            margin-top: 38px;
+            &-item{
+                width: 180px;
+            }
+        }
+        &__text-block{
+            font-size: 10px;
+            margin-top: 20px;
+            span {
+                font-size: 14px;
+            }
+
+        }
+    }
+}
+@media (max-width: 575px){
+    .promo{
+        padding: 16px 10px 20px 10px;
+        &__header{
+            text-align: center;
+            font-size: 32px;
+        }
+        &__subheader{
+            text-align: center;
+            font-size: 13px;
+        }
+        &__wrapper{
+            align-items: center;
+        }
+        &__icons{
+            justify-content: space-around;
+            width: 100%;
+        }
+        &__icon{
+            font-size: 11px;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    .benefits{
+        padding: 25px 4px 25px 4px;
+        &__header{
+            font-size: 22px;
+        }
+        &__block{
+            margin-top: 15px;
+            flex-direction: column;
+        } 
+        &__block-item{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__text-block{
+            text-align: left;
+            margin-left: 8px;
+            margin-top: 0;
+            width: 70%;
+        }
+    }
+}
