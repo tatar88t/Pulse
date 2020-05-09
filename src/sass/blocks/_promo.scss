@@ -63,13 +63,7 @@
     padding: 70px 0 84px 0;
     background: #f6f6f6;
     
-    &__header{
-        font-size: 30px;
-        color: rgb(13, 13, 13);
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 600;
-    }
+
     &__block{
         margin-top: 74px;
         display: flex;
@@ -162,9 +156,7 @@
         }      
     }
     .benefits{
-        &__header{
-            font-size: 24px;
-        }
+
         padding: 40px 0 40px 0;
         &__block{
             margin-top: 38px;
@@ -210,9 +202,7 @@
     }
     .benefits{
         padding: 25px 4px 25px 4px;
-        &__header{
-            font-size: 22px;
-        }
+
         &__block{
             margin-top: 15px;
             flex-direction: column;
