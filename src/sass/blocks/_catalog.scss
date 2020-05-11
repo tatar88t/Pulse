@@ -52,17 +52,23 @@
             &_active{
                 justify-content: space-around;
             }
+
         }
-        
+        &__tab{
+            width: 30%;
+            font-size: 12px;
+            margin: 0 2px;
+        }
         
     }
 }
 @media(max-width: 575px){
     .catalog{
         &__tab{
-            width: 30%;
-            font-size: 9px;
+            width: 26%;
+            font-size: 8px;
             margin: 0 2px;
+            font-weight: 700;
         }
     }
 }

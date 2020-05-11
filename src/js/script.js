@@ -18,12 +18,35 @@ $(document).ready(function(){
       });
 
 
-
-      $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
-        $(this)
-          .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
-          .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+      //////////////////////
+      window.addEventListener('resize', function(){
+        if (window.matchMedia("(max-width: 650px)").matches) {
+          sliderMobile()
+        } 
       });
+      
+      if (window.matchMedia("(max-width: 650px)").matches) {
+        sliderMobile()
+      };
+      
+      /////////////////////
+      function tabs() {
+        $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+          $(this)
+            .addClass('catalog__tab_active')
+            .siblings().removeClass('catalog__tab_active')
+            .closest('div.container')
+            .find('div.catalog__content')
+            .removeClass('catalog__content_active')
+            .eq($(this).index()).addClass('catalog__content_active');
+
+            if (window.matchMedia("(max-width: 650px)").matches) {
+              sliderMobile()
+            }
+
+        });
+      };
+      tabs();
 
       function toggleSlide(item) {
         $(item).each(function(i) {
@@ -43,27 +66,44 @@ $(document).ready(function(){
         let slides = document.querySelectorAll('.catalog__content_active .catalog-item'),
             tabs = document.querySelectorAll('.catalog__tab'),
             slideIndex = 1;
-        console.log(tabs)
-        console.log(slides)
-
-        function showSlides(){
+        function showSlides(n){
           tabs.forEach(tab => {
-            console.log(tab)
-
+              if (n < 1) {slideIndex = slides.length};
+              if (n > slides.length) {slideIndex = 1};
           
               if (tab.classList.contains('catalog__tab_active')) {
                 slides.forEach(item => {
                   item.style.display = 'none'
                 });
                 slides[slideIndex - 1].style.display = 'block';
-              }
-            
-            
-          })
+              }  
+          });
         }
-        showSlides()
+        function plusSlide(n) {
+          showSlides(slideIndex += n)
+        }
+        showSlides(slideIndex)
+        
+        
+        function swipeLeft(slides) {
+          $(slides).each(function(i) {
+            $(this).on('swipeleft', { passive: false }, function(e){
+              // e.preventDefault();
+              plusSlide(1);
+            })
+            $(this).on('swiperight', { passive: false }, function(e){
+              // e.preventDefault();
+              plusSlide(-1);
+            })
+          })
+        };
+
+
+        swipeLeft(slides); 
       }
-      // sliderMobile()
+
+
+      
       
 
 
