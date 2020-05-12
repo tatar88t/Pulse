@@ -1,8 +1,7 @@
 {
   "name": "pulse",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +15,16 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0"
-  }
+    "gulp-sass": "^4.1.0",
+    "webpack": "^4.43.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatar88t/Pulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tatar88t/Pulse/issues"
+  },
+  "homepage": "https://github.com/tatar88t/Pulse#readme",
+  "description": ""
 }

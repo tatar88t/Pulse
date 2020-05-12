@@ -1,0 +1,46 @@
+.pageup{
+    display: none;
+    opacity: 0.4;
+    position: fixed;
+    bottom: 200px;
+    left: 140px;
+    width: 40px;
+    height: 40px;
+    &:hover{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    &:active{
+        opacity: 0.4;
+    }
+    &:focus{
+        opacity: 0.3;
+    }
+}
+@media(max-width: 1140px){
+    .pageup{
+        opacity: 0.4;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        &:active{
+            opacity: 1;
+            transition: 0.5s;
+        }
+        &:focus{
+            opacity: 0.3;
+        }
+    }
+}
+
+@media(max-width: 575px){
+    .pageup{
+        opacity: 0.3;
+        &:hover{
+            opacity: 0.3;
+        }
+        &:focus{
+            opacity: 0.3;
+        }
+    }
+}

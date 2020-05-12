@@ -6,8 +6,15 @@
 @import 'blocks/consultation';
 @import 'blocks/forms';
 @import 'blocks/slider';
-@import 'blocks/_catalog';
-@import 'blocks/_catalog-item';
+@import 'blocks/catalog';
+@import 'blocks/catalog-item';
+@import 'blocks/reviews';
+@import 'blocks/footer';
+@import 'blocks/moddal';
+@import 'blocks/flipInLeft';
+@import 'blocks/flipInRight';
+@import 'blocks/pageup';
+
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;
     box-sizing: border-box;
@@ -17,4 +24,7 @@
 .container {
     max-width: 950px;
     margin: 0 auto;
+}
+.ui-loader-header{
+    display: none;
 }
