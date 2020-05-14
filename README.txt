@@ -4,7 +4,7 @@ Tools:
     jQuery
     gulp
     VSCode
-    
+
 Features realized:
 
     1.Slider on "Slick-Slider"
@@ -15,4 +15,4 @@ Features realized:
     5.Tabs on jQuery
     6.Data sending  on jQuery with "php Mailer" (doesn't work on github)
     7.Scroll to top button 
-    8.Preprocessor Scss
+    
