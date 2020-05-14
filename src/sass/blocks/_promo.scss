@@ -165,7 +165,7 @@
             }
         }
         &__text-block{
-            font-size: 10px;
+            font-size: 12px;
             margin-top: 20px;
             span {
                 font-size: 14px;
@@ -201,7 +201,7 @@
         }
     }
     .benefits{
-        padding: 25px 4px 25px 4px;
+        padding: 25px 4px 70px 4px;
 
         &__block{
             margin-top: 15px;
@@ -212,13 +212,31 @@
             justify-content: space-around;
             align-items: center;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         &__text-block{
             text-align: left;
             margin-left: 8px;
             margin-top: 0;
             width: 70%;
+            font-size: 12px;
         }
+    }
+}
+@keyframes heartbeat{
+    from {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+#heart{
+    animation: heartbeat 1.5s ease infinite; 
+    &:hover{
+        animation-play-state: paused;
     }
 }
